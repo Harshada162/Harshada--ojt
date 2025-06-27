@@ -5,8 +5,6 @@ import { SIMILARITY_THRESHOLD } from "../utils/constants";
 import "./Chatbot.css";
 import useOnlineStatus from "../hooks/useOnlineStatus";
 import KNOWLEDGE_BASE_DATA from "../data/knowledgeBase.json";
-
-
 const ChatbotComponent = () => {
   const [messages, setMessages] = useState([
     { text: KNOWLEDGE_BASE_DATA.greeting.response, sender: "bot" },
@@ -171,6 +169,7 @@ const ChatbotComponent = () => {
                 connection.
               </p>
             )}
+
             <div className="chatbot-messages" ref={chatMessagesRef}>
               {messages.map((message, index) => (
                 <div key={index} className={`message-row ${message.sender}`}>
